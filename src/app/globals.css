@@ -1,26 +1,113 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Typography — DM Sans (neo-grotesque-minimal) */
+  --font-heading: "DM Sans", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+
+  /* Colors — Dark Immersive + Brand Accents */
+  --color-bg-base: #0a0a0f;
+  --color-bg-elevated: #12121a;
+  --color-bg-card: rgba(255, 255, 255, 0.06);
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --color-border: rgba(255, 255, 255, 0.08);
+
+  /* Brand accent colors from logo */
+  --color-accent-yellow: #F5A623;
+  --color-accent-orange: #E8472F;
+  --color-accent-blue: #2D89EF;
+  --color-accent-green: #27AE60;
+  --color-accent-purple: #8E44AD;
+
+  /* Primary accent for CTAs */
+  --color-accent: #E8472F;
+  --color-accent-hover: #d43a24;
+
+  /* Glass ethereal component tokens */
+  --color-glass: rgba(255, 255, 255, 0.06);
+  --color-glass-border: rgba(255, 255, 255, 0.10);
+  --color-glass-hover: rgba(255, 255, 255, 0.12);
+
+  /* Spacing — airy */
+  --spacing-section: 96px;
+  --spacing-component: 32px;
+
+  /* Layout */
+  --layout-max-width: 1280px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  /* Gradients (not supported in @theme) */
+  --gradient-primary: linear-gradient(135deg, #F5A623, #E8472F);
+  --gradient-cool: linear-gradient(135deg, #2D89EF, #27AE60);
+  --gradient-warm: linear-gradient(135deg, #E8472F, #8E44AD);
+  --gradient-full: linear-gradient(135deg, #F5A623, #E8472F, #8E44AD, #2D89EF, #27AE60);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
 }
+
+/* Gradient text utility */
+.text-gradient-primary {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  padding-right: 0.05em;
+}
+
+.text-gradient-cool {
+  background: var(--gradient-cool);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  padding-right: 0.05em;
+}
+
+.text-gradient-full {
+  background: var(--gradient-full);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  padding-right: 0.05em;
+}
+
+/* Glass card utility */
+.glass-card {
+  background: var(--color-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--color-glass-border);
+  border-radius: 16px;
+  transition: all 260ms cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: var(--color-glass-hover);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Snappy entrance animation */
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 500ms cubic-bezier(0.0, 0.0, 0.2, 1) forwards;
+  opacity: 0;
+}
+
+/* Stagger delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
