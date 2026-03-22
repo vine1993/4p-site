@@ -11,6 +11,7 @@ const services = [
     description:
       "Sites institucionais, landing pages e e-commerces. Design exclusivo com foco em conversão e performance.",
     cta: "Quero meu site",
+    href: "/servicos/criacao-de-sites",
     accent: "from-(--color-accent-blue)/15 to-(--color-accent-blue)/5",
     iconColor: "text-(--color-accent-blue)",
   },
@@ -26,6 +27,7 @@ const services = [
     description:
       "Apps nativos e multiplataforma para iOS e Android. Da concepção ao lançamento nas lojas.",
     cta: "Criar meu app",
+    href: "/servicos/aplicativos-mobile",
     accent: "from-(--color-accent-green)/15 to-(--color-accent-green)/5",
     iconColor: "text-(--color-accent-green)",
   },
@@ -41,6 +43,7 @@ const services = [
     description:
       "Plataformas e sistemas sob medida. Dashboards, painéis administrativos e automações que otimizam seu negócio.",
     cta: "Preciso de um sistema",
+    href: "/servicos/sistemas-web",
     accent: "from-(--color-accent-orange)/15 to-(--color-accent-orange)/5",
     iconColor: "text-(--color-accent-orange)",
   },
@@ -57,6 +60,7 @@ const services = [
     description:
       "Soluções digitais personalizadas. Integrações, APIs e ferramentas específicas para o seu modelo de negócio.",
     cta: "Tenho um projeto",
+    href: "/servicos/produtos-customizados",
     accent: "from-(--color-accent-purple)/15 to-(--color-accent-purple)/5",
     iconColor: "text-(--color-accent-purple)",
   },
@@ -112,7 +116,7 @@ export default function Services() {
                 </p>
 
                 <a
-                  href="#contato"
+                  href={service.href}
                   className="mt-6 inline-flex items-center gap-2 text-sm font-semibold transition-colors"
                   style={{ color: "var(--color-accent-orange)" }}
                 >

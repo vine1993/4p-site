@@ -4,19 +4,19 @@ const navGroups = [
   {
     title: "Serviços",
     links: [
-      { label: "Criação de Sites", href: "#servicos" },
-      { label: "Aplicativos Mobile", href: "#servicos" },
-      { label: "Sistemas Web", href: "#servicos" },
-      { label: "Produtos Customizados", href: "#servicos" },
+      { label: "Criação de Sites", href: "/servicos/criacao-de-sites" },
+      { label: "Aplicativos Mobile", href: "/servicos/aplicativos-mobile" },
+      { label: "Sistemas Web", href: "/servicos/sistemas-web" },
+      { label: "Produtos Customizados", href: "/servicos/produtos-customizados" },
     ],
   },
   {
     title: "Empresa",
     links: [
       { label: "Sobre Nós", href: "#" },
-      { label: "Como Funciona", href: "#como-funciona" },
-      { label: "Resultados", href: "#resultados" },
-      { label: "Contato", href: "#contato" },
+      { label: "Como Funciona", href: "/#como-funciona" },
+      { label: "Resultados", href: "/#resultados" },
+      { label: "Contato", href: "/#contato" },
     ],
   },
 ];
@@ -28,11 +28,14 @@ export default function Footer() {
         <div className="grid grid-cols-12 gap-8">
           {/* Brand — col 1-4 */}
           <div className="col-span-12 lg:col-span-4">
-            <a href="#" className="flex items-center gap-3">
-              <Image src="/logo.png" alt="Four Pixels" width={36} height={36} />
-              <span className="text-lg font-bold text-(--color-text-primary)">
-                Four Pixels
-              </span>
+            <a href="/">
+              <Image
+                src="/logo.png"
+                alt="Four Pixels — Agência Digital"
+                width={360}
+                height={100}
+                className="h-12 w-auto"
+              />
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-(--color-text-secondary)">
               Agência digital especializada em sites e aplicativos que geram
