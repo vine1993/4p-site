@@ -1,9 +1,9 @@
 "use client";
 
 import { useActionState, useState } from "react";
-import { sendContactEmail } from "@/app/actions/contact";
+import { sendContactEmail, type ContactFormState } from "@/app/actions/contact";
 
-const initialState = { success: false };
+const initialState: ContactFormState = { success: false };
 
 interface FieldErrors {
   name?: string;
