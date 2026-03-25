@@ -47,14 +47,14 @@ export default function SocialProof() {
                 className="glass-card flex flex-col items-center justify-between gap-4 p-6 text-center"
               >
                 {/* Fixed-height logo area — keeps all cards aligned */}
-                <div className="flex h-20 w-full items-center justify-center">
+                <div className="flex h-20 w-full items-center justify-center overflow-hidden">
                   {client.logo ? (
                     <Image
                       src={client.logo}
                       alt={client.name}
                       width={200}
                       height={80}
-                      className="h-full w-auto max-w-40 object-contain opacity-85"
+                      className="h-full w-auto max-w-full object-contain opacity-85"
                     />
                   ) : (
                     <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-(--color-glass) border border-(--color-glass-border)">
