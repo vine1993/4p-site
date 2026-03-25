@@ -16,7 +16,6 @@ const navGroups = [
       { label: "Sobre Nós", href: "#" },
       { label: "Como Funciona", href: "/#como-funciona" },
       { label: "Resultados", href: "/#resultados" },
-      { label: "Contato", href: "/#contato" },
     ],
   },
 ];
@@ -64,45 +63,12 @@ export default function Footer() {
             </div>
           ))}
 
-          {/* Contact info */}
-          <div className="col-span-12 lg:col-span-3 lg:col-start-10">
-            <h4 className="text-sm font-semibold text-(--color-text-primary)">
-              Contato
-            </h4>
-            <ul className="mt-4 space-y-3 text-sm text-(--color-text-secondary)">
-              <li>
-                <a
-                  href="mailto:contato@fourpixels.com.br"
-                  className="transition-colors hover:text-(--color-text-primary)"
-                >
-                  contato@fourpixels.com.br
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://wa.me/5511961848388"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-colors hover:text-(--color-text-primary)"
-                >
-                  WhatsApp
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
 
         {/* Bottom bar */}
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-(--color-border) pt-8 text-xs text-(--color-text-secondary) sm:flex-row">
           <p>&copy; {new Date().getFullYear()} 4 Pixels. Todos os direitos reservados.</p>
-          <div className="flex gap-6">
-            <a href="#" className="transition-colors hover:text-(--color-text-primary)">
-              Privacidade
-            </a>
-            <a href="#" className="transition-colors hover:text-(--color-text-primary)">
-              Termos
-            </a>
-          </div>
+          <p className="text-text-secondary/50">ad4pixels.com.br</p>
         </div>
       </div>
     </footer>

@@ -12,6 +12,7 @@ const services = [
       "Sites institucionais, landing pages e e-commerces. Design exclusivo com foco em conversão e performance.",
     cta: "Quero meu site",
     href: "/servicos/criacao-de-sites",
+    waMessage: "Olá! Tenho interesse em criar um site.",
     accent: "from-(--color-accent-blue)/15 to-(--color-accent-blue)/5",
     iconColor: "text-(--color-accent-blue)",
   },
@@ -28,6 +29,7 @@ const services = [
       "Apps nativos e multiplataforma para iOS e Android. Da concepção ao lançamento nas lojas.",
     cta: "Criar meu app",
     href: "/servicos/aplicativos-mobile",
+    waMessage: "Olá! Tenho interesse em desenvolver um aplicativo mobile.",
     accent: "from-(--color-accent-green)/15 to-(--color-accent-green)/5",
     iconColor: "text-(--color-accent-green)",
   },
@@ -44,6 +46,7 @@ const services = [
       "Plataformas e sistemas sob medida. Dashboards, painéis administrativos e automações que otimizam seu negócio.",
     cta: "Preciso de um sistema",
     href: "/servicos/sistemas-web",
+    waMessage: "Olá! Preciso de um sistema web sob medida.",
     accent: "from-(--color-accent-orange)/15 to-(--color-accent-orange)/5",
     iconColor: "text-(--color-accent-orange)",
   },
@@ -61,6 +64,7 @@ const services = [
       "Soluções digitais personalizadas. Integrações, APIs e ferramentas específicas para o seu modelo de negócio.",
     cta: "Tenho um projeto",
     href: "/servicos/produtos-customizados",
+    waMessage: "Olá! Tenho um projeto de produto digital customizado.",
     accent: "from-(--color-accent-purple)/15 to-(--color-accent-purple)/5",
     iconColor: "text-(--color-accent-purple)",
   },
@@ -115,16 +119,26 @@ export default function Services() {
                   {service.description}
                 </p>
 
-                <a
-                  href={service.href}
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-semibold transition-colors"
-                  style={{ color: "var(--color-accent-orange)" }}
-                >
-                  {service.cta}
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                    <path d="M5 3L9 7L5 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </a>
+                <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-end sm:gap-5">
+                  <a
+                    href={`https://wa.me/5511961848388?text=${encodeURIComponent(service.waMessage)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold transition-colors"
+                    style={{ color: "var(--color-accent-orange)" }}
+                  >
+                    {service.cta}
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M5 3L9 7L5 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </a>
+                  <a
+                    href={service.href}
+                    className="text-sm text-(--color-text-secondary) transition-colors hover:text-(--color-text-primary)"
+                  >
+                    Saiba mais
+                  </a>
+                </div>
               </div>
             </div>
           ))}
