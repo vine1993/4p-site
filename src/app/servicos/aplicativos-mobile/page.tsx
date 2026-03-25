@@ -62,6 +62,7 @@ export default function AplicativosMobile() {
           highlight="Sempre acessível."
           description="Desenvolvemos aplicativos para iOS e Android com design intuitivo, performance nativa e foco total na experiência do usuário."
           cta="Quero meu app"
+          whatsappMessage="Olá! Gostaria de desenvolver um aplicativo mobile. Pode me enviar um orçamento?"
           visual={<PhoneMockup />}
         />
         <ProblemSolution
@@ -208,6 +209,7 @@ export default function AplicativosMobile() {
             </>
           }
           subtitle="Solicite um orçamento sem compromisso. Vamos transformar sua ideia em um app que seus usuários vão adorar."
+          whatsappMessage="Olá! Gostaria de desenvolver um aplicativo mobile. Pode me enviar um orçamento?"
         />
       </main>
       <Footer />

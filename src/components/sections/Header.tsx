@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { createPortal } from "react-dom";
 import Image from "next/image";
 
 const serviceLinks = [
@@ -42,6 +43,7 @@ export default function Header() {
   }, []);
 
   return (
+    <>
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
@@ -112,7 +114,9 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="/#contato"
+            href="https://wa.me/5511961848388?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+            target="_blank"
+            rel="noopener noreferrer"
             className="rounded-2xl px-6 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:shadow-lg hover:shadow-(--color-accent-orange)/30 hover:brightness-110"
             style={{ background: "var(--gradient-primary)" }}
           >
@@ -121,32 +125,35 @@ export default function Header() {
         </nav>
 
         {/* Mobile hamburger */}
-        <button
-          className="flex flex-col gap-1.5 md:hidden"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Menu"
-        >
-          <span
-            className={`block h-0.5 w-6 bg-(--color-text-primary) transition-transform duration-300 ${
-              menuOpen ? "translate-y-2 rotate-45" : ""
-            }`}
-          />
-          <span
-            className={`block h-0.5 w-6 bg-(--color-text-primary) transition-opacity duration-300 ${
-              menuOpen ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`block h-0.5 w-6 bg-(--color-text-primary) transition-transform duration-300 ${
-              menuOpen ? "-translate-y-2 -rotate-45" : ""
-            }`}
-          />
-        </button>
+        {!menuOpen && (
+          <button
+            className="flex flex-col gap-1.5 md:hidden"
+            onClick={() => setMenuOpen(true)}
+            aria-label="Abrir menu"
+          >
+            <span className="block h-0.5 w-6 bg-(--color-text-primary)" />
+            <span className="block h-0.5 w-6 bg-(--color-text-primary)" />
+            <span className="block h-0.5 w-6 bg-(--color-text-primary)" />
+          </button>
+        )}
       </div>
 
-      {/* Mobile menu overlay */}
-      {menuOpen && (
-        <div className="fixed inset-0 z-40 flex flex-col items-center justify-center gap-6 bg-(--color-bg-base)/98 backdrop-blur-2xl md:hidden">
+    </header>
+
+      {/* Mobile menu overlay — rendered via portal so backdrop-filter on header doesn't break fixed positioning */}
+      {menuOpen && createPortal(
+        <div className="fixed inset-0 z-100 flex flex-col items-center justify-center gap-6 bg-bg-base/98 backdrop-blur-2xl md:hidden">
+          {/* Close button */}
+          <button
+            onClick={() => setMenuOpen(false)}
+            aria-label="Fechar menu"
+            className="absolute top-5 right-6 flex h-10 w-10 items-center justify-center rounded-full border border-(--color-border) text-(--color-text-primary)"
+          >
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 3L13 13M13 3L3 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            </svg>
+          </button>
+
           {/* Services accordion */}
           <div className="flex flex-col items-center">
             <button
@@ -197,15 +204,18 @@ export default function Header() {
             </a>
           ))}
           <a
-            href="/#contato"
+            href="https://wa.me/5511961848388?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setMenuOpen(false)}
             className="mt-4 rounded-2xl px-8 py-3 text-lg font-semibold text-white"
             style={{ background: "var(--gradient-primary)" }}
           >
             Solicitar Orçamento
           </a>
-        </div>
+        </div>,
+        document.body
       )}
-    </header>
+    </>
   );
 }

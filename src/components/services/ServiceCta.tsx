@@ -3,9 +3,13 @@ import type { ReactNode } from "react";
 export interface ServiceCtaProps {
   title: ReactNode;
   subtitle: string;
+  whatsappMessage: string;
 }
 
-export default function ServiceCta({ title, subtitle }: ServiceCtaProps) {
+const WHATSAPP_NUMBER = "5511961848388";
+
+export default function ServiceCta({ title, subtitle, whatsappMessage }: ServiceCtaProps) {
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
   return (
     <section className="relative py-24 lg:py-32 bg-(--color-bg-elevated)">
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
@@ -29,7 +33,9 @@ export default function ServiceCta({ title, subtitle }: ServiceCtaProps) {
 
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <a
-                href="#contato"
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-2xl px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:shadow-lg hover:shadow-(--color-accent-orange)/30 hover:brightness-110"
                 style={{ background: "var(--gradient-primary)" }}
               >
@@ -45,7 +51,7 @@ export default function ServiceCta({ title, subtitle }: ServiceCtaProps) {
                 </svg>
               </a>
               <a
-                href="https://wa.me/5500000000000"
+                href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-2xl border border-(--color-glass-border) bg-(--color-glass) px-8 py-4 text-base font-semibold text-(--color-text-primary) transition-all duration-200 hover:bg-(--color-glass-hover)"

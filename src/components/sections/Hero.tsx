@@ -114,7 +114,7 @@ export default function Hero() {
   const Geometric = variants[VARIANT];
 
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-(--color-bg-base) pt-20">
+    <section className="relative flex min-h-screen items-center overflow-hidden bg-(--color-bg-base) pt-36 lg:pt-32">
       {/* Ambient glow */}
       <div className="pointer-events-none absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[600px] w-[800px] rounded-full bg-(--color-accent-blue)/8 blur-[120px]" />
       <div className="pointer-events-none absolute bottom-1/4 right-0 h-[400px] w-[400px] rounded-full bg-(--color-accent-purple)/6 blur-[100px]" />
@@ -139,7 +139,9 @@ export default function Hero() {
 
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
             <a
-              href="#contato"
+              href="https://wa.me/5511961848388?text=Ol%C3%A1%21%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-2xl px-8 py-4 text-base font-semibold text-white transition-all duration-200 hover:shadow-xl hover:shadow-(--color-accent-orange)/30 hover:brightness-110"
               style={{ background: "var(--gradient-primary)" }}
             >

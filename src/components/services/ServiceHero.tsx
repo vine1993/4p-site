@@ -1,11 +1,14 @@
 import type { ReactNode } from "react";
 
+const WHATSAPP_NUMBER = "5511961848388";
+
 interface ServiceHeroProps {
   badge: string;
   title: string;
   highlight: string;
   description: string;
   cta: string;
+  whatsappMessage: string;
   visual: ReactNode;
 }
 
@@ -15,8 +18,10 @@ export default function ServiceHero({
   highlight,
   description,
   cta,
+  whatsappMessage,
   visual,
 }: ServiceHeroProps) {
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
   return (
     <section className="relative overflow-hidden bg-(--color-bg-base) pt-32 pb-24 lg:pt-44 lg:pb-32">
       {/* Ambient glows */}
@@ -43,7 +48,9 @@ export default function ServiceHero({
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
-                href="#contato"
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-2xl px-8 py-3.5 text-sm font-semibold text-white transition-all duration-200 hover:shadow-lg hover:shadow-(--color-accent-orange)/30 hover:brightness-110"
                 style={{ background: "var(--gradient-primary)" }}
               >

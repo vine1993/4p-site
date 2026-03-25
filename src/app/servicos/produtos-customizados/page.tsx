@@ -62,6 +62,7 @@ export default function ProdutosCustomizados() {
           highlight="Sua solução também deve ser."
           description="Desenvolvemos produtos digitais sob medida — integrações, APIs, ferramentas e plataformas específicas para o seu modelo de negócio."
           cta="Tenho um projeto"
+          whatsappMessage="Olá! Tenho um projeto de produto digital customizado e gostaria de conversar sobre um orçamento."
           visual={<CodeMockup />}
         />
         <ProblemSolution
@@ -208,6 +209,7 @@ export default function ProdutosCustomizados() {
             </>
           }
           subtitle="Solicite um orçamento sem compromisso. Vamos entender seu desafio e propor a solução técnica ideal."
+          whatsappMessage="Olá! Tenho um projeto de produto digital customizado e gostaria de conversar sobre um orçamento."
         />
       </main>
       <Footer />
