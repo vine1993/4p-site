@@ -10,7 +10,7 @@ import ServiceCta from "@/components/services/ServiceCta";
 import DashboardMockup from "@/components/services/visuals/DashboardMockup";
 
 export const metadata: Metadata = {
-  title: "Desenvolvimento de Sistemas Web | Four Pixels — Agência Digital",
+  title: "Desenvolvimento de Sistemas Web | 4 Pixels — Agência Digital",
   description:
     "Desenvolvimento de sistemas web sob medida. Dashboards, painéis administrativos, plataformas e automações para otimizar seu negócio.",
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "sistema para empresa",
   ],
   openGraph: {
-    title: "Desenvolvimento de Sistemas Web | Four Pixels",
+    title: "Desenvolvimento de Sistemas Web | 4 Pixels",
     description:
       "Sistemas web sob medida para otimizar seu negócio. Solicite um orçamento sem compromisso.",
     type: "website",
@@ -40,7 +40,7 @@ const jsonLd = {
     "Desenvolvimento de sistemas web sob medida: dashboards, painéis administrativos, plataformas e automações empresariais.",
   provider: {
     "@type": "Organization",
-    name: "Four Pixels — Agência Digital",
+    name: "4 Pixels — Agência Digital",
     url: "https://fourpixels.com.br",
   },
   areaServed: { "@type": "Country", name: "Brasil" },

@@ -172,7 +172,7 @@ differentiation:
     - axis: "color"
       convention: "Dark navy + bright blue palette"
       alternative: "Use brand's multicolor palette with dark/light contrast, avoid generic blue"
-      reason: "Every competitor uses blue — Four Pixels' colorful logo is a natural differentiator"
+      reason: "Every competitor uses blue — 4 Pixels' colorful logo is a natural differentiator"
     - axis: "typography"
       convention: "Poppins/Montserrat headings"
       alternative: "Futuristic geometric sans-serif (e.g., Space Grotesk, Outfit, Clash Display)"

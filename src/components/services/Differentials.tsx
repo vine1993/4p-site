@@ -31,7 +31,7 @@ export default function Differentials({
 
       <div className="mx-auto max-w-(--layout-max-width) px-6 lg:px-20">
         <p className="text-xs tracking-[0.2em] uppercase text-(--color-accent-orange) mb-4">
-          Por que a Four Pixels
+          Por que a 4 Pixels
         </p>
         <h2 className="text-3xl font-bold tracking-tight lg:text-5xl">
           {title}

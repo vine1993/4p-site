@@ -10,7 +10,7 @@ import ServiceCta from "@/components/services/ServiceCta";
 import PhoneMockup from "@/components/services/visuals/PhoneMockup";
 
 export const metadata: Metadata = {
-  title: "Desenvolvimento de Aplicativos Mobile | Four Pixels — Agência Digital",
+  title: "Desenvolvimento de Aplicativos Mobile | 4 Pixels — Agência Digital",
   description:
     "Desenvolvimento de aplicativos mobile para iOS e Android. Apps nativos e multiplataforma com design intuitivo e foco na experiência do usuário.",
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "criar app",
   ],
   openGraph: {
-    title: "Desenvolvimento de Aplicativos Mobile | Four Pixels",
+    title: "Desenvolvimento de Aplicativos Mobile | 4 Pixels",
     description:
       "Apps para iOS e Android com design intuitivo e foco na experiência do usuário. Solicite um orçamento.",
     type: "website",
@@ -40,7 +40,7 @@ const jsonLd = {
     "Desenvolvimento de aplicativos nativos e multiplataforma para iOS e Android com design intuitivo e foco na experiência do usuário.",
   provider: {
     "@type": "Organization",
-    name: "Four Pixels — Agência Digital",
+    name: "4 Pixels — Agência Digital",
     url: "https://fourpixels.com.br",
   },
   areaServed: { "@type": "Country", name: "Brasil" },
@@ -135,7 +135,7 @@ export default function AplicativosMobile() {
           title={
             <>
               Por que escolher a{" "}
-              <span className="text-gradient-primary">Four Pixels.</span>
+              <span className="text-gradient-primary">4 Pixels.</span>
             </>
           }
           subtitle="Experiência real em apps que vão além do visual. Construímos produtos que os usuários realmente usam."

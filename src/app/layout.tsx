@@ -9,7 +9,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Four Pixels — Agência Digital",
+  title: "4 Pixels — Agência Digital",
   description:
     "Criamos sites e aplicativos que convertem. Agência digital especializada em desenvolvimento web e mobile.",
 };

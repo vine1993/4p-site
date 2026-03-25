@@ -53,7 +53,7 @@ export default function Header() {
         <a href="/">
           <Image
             src="/logo.png"
-            alt="Four Pixels — Agência Digital"
+            alt="4 Pixels — Agência Digital"
             width={360}
             height={100}
             className={`w-auto transition-all duration-300 ${scrolled ? "h-8" : "h-20"}`}

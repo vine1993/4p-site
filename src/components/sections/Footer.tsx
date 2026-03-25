@@ -31,7 +31,7 @@ export default function Footer() {
             <a href="/">
               <Image
                 src="/logo.png"
-                alt="Four Pixels — Agência Digital"
+                alt="4 Pixels — Agência Digital"
                 width={360}
                 height={100}
                 className="h-12 w-auto"
@@ -92,7 +92,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-(--color-border) pt-8 text-xs text-(--color-text-secondary) sm:flex-row">
-          <p>&copy; {new Date().getFullYear()} Four Pixels. Todos os direitos reservados.</p>
+          <p>&copy; {new Date().getFullYear()} 4 Pixels. Todos os direitos reservados.</p>
           <div className="flex gap-6">
             <a href="#" className="transition-colors hover:text-(--color-text-primary)">
               Privacidade

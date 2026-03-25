@@ -10,7 +10,7 @@ import ServiceCta from "@/components/services/ServiceCta";
 import CodeMockup from "@/components/services/visuals/CodeMockup";
 
 export const metadata: Metadata = {
-  title: "Produtos Digitais Customizados | Four Pixels — Agência Digital",
+  title: "Produtos Digitais Customizados | 4 Pixels — Agência Digital",
   description:
     "Desenvolvimento de soluções digitais personalizadas. Integrações, APIs, ferramentas e produtos digitais sob medida para o seu modelo de negócio.",
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "desenvolvimento de produto",
   ],
   openGraph: {
-    title: "Produtos Digitais Customizados | Four Pixels",
+    title: "Produtos Digitais Customizados | 4 Pixels",
     description:
       "Soluções digitais personalizadas para o seu modelo de negócio. Solicite um orçamento.",
     type: "website",
@@ -40,7 +40,7 @@ const jsonLd = {
     "Desenvolvimento de soluções digitais personalizadas: integrações, APIs, ferramentas e produtos sob medida.",
   provider: {
     "@type": "Organization",
-    name: "Four Pixels — Agência Digital",
+    name: "4 Pixels — Agência Digital",
     url: "https://fourpixels.com.br",
   },
   areaServed: { "@type": "Country", name: "Brasil" },

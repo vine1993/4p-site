@@ -1,7 +1,7 @@
 const featured = {
   quote:
-    "O site ficou muito acima do que esperávamos e os resultados apareceram no primeiro mês.",
-  name: "Carlos Mendes",
+    "A 4Pixels é uma empresa inovadora, com um tempo de entrega muito bom e que se preocupa em atender nos detalhes as necessidades dos seus clientes.",
+  name: "Thiago Fialho",
   role: "CEO, GT Plan",
   result: "+340%",
   resultLabel: "aumento em leads",
@@ -11,19 +11,19 @@ const featured = {
 const others = [
   {
     quote:
-      "Entregaram no prazo, com qualidade e sempre disponíveis para ajustar o que fosse necessário.",
-    name: "Ana Ferreira",
-    role: "Diretora de Marketing, TechNova",
-    result: "2x",
-    resultLabel: "mais conversões",
+      "Com grande competência conseguimos triplicar nosso faturamento em 4 meses. Resultados de gigantes com o custo para pequenos!",
+    name: "Gregori Baller",
+    role: "CEO, Feiríssima Hortifruti Online",
+    result: "3x",
+    resultLabel: "faturamento em 4 meses",
   },
   {
     quote:
-      "Nosso aplicativo ficou exatamente como imaginamos. A equipe é técnica e entende de negócio.",
-    name: "Ricardo Lopes",
-    role: "Fundador, Solar Energy",
-    result: "4.9",
-    resultLabel: "nota na App Store",
+      "A plataforma de botões digitais da 4Pixels mudou a experiência dos nossos clientes. Hoje eles visualizam, personalizam e decidem comprar com muito mais confiança.",
+    name: "Marcio Ramos",
+    role: "Cardenas — Botões para forrar",
+    result: "↑",
+    resultLabel: "conversão de vendas",
   },
 ];
 
@@ -57,23 +57,6 @@ export default function VisualBreak() {
               <p className="text-lg text-(--color-text-secondary) lg:text-xl">
                 {featured.resultLabel}
               </p>
-              <a
-                href={featured.projectUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-(--color-accent-orange) transition-colors hover:text-(--color-text-primary)"
-              >
-                Ver projeto
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path
-                    d="M3 11L11 3M11 3H5M11 3V9"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </a>
             </div>
 
             {/* Right — quote */}

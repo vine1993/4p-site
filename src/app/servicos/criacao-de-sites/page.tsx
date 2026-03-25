@@ -10,7 +10,7 @@ import ServiceCta from "@/components/services/ServiceCta";
 import BrowserMockup from "@/components/services/visuals/BrowserMockup";
 
 export const metadata: Metadata = {
-  title: "Criação de Sites Profissionais | Four Pixels — Agência Digital",
+  title: "Criação de Sites Profissionais | 4 Pixels — Agência Digital",
   description:
     "Criação de sites profissionais com design exclusivo e foco em conversão. Sites institucionais, landing pages e e-commerces. Solicite um orçamento.",
   keywords: [
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "landing page",
   ],
   openGraph: {
-    title: "Criação de Sites Profissionais | Four Pixels",
+    title: "Criação de Sites Profissionais | 4 Pixels",
     description:
       "Sites com design exclusivo e foco em conversão. Solicite um orçamento sem compromisso.",
     type: "website",
@@ -40,7 +40,7 @@ const jsonLd = {
     "Desenvolvimento de sites institucionais, landing pages e e-commerces com design exclusivo e foco em conversão.",
   provider: {
     "@type": "Organization",
-    name: "Four Pixels — Agência Digital",
+    name: "4 Pixels — Agência Digital",
     url: "https://fourpixels.com.br",
   },
   areaServed: { "@type": "Country", name: "Brasil" },
