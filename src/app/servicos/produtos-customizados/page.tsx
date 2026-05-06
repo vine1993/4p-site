@@ -8,27 +8,39 @@ import Differentials from "@/components/services/Differentials";
 import ServiceFaq from "@/components/services/ServiceFaq";
 import ServiceCta from "@/components/services/ServiceCta";
 import CodeMockup from "@/components/services/visuals/CodeMockup";
+import Breadcrumbs from "@/components/services/Breadcrumbs";
+
+const PATH = "/servicos/produtos-customizados";
+const SITE_URL = "https://ad4pixels.com.br";
 
 export const metadata: Metadata = {
-  title: "Produtos Digitais Customizados | 4 Pixels — Agência Digital",
+  title: "Produtos Digitais Customizados e Soluções Sob Medida",
   description:
-    "Desenvolvimento de soluções digitais personalizadas. Integrações, APIs, ferramentas e produtos digitais sob medida para o seu modelo de negócio.",
+    "Desenvolvimento de soluções digitais personalizadas. Integrações, APIs e ferramentas sob medida. Atendemos todo o Brasil e projetos remotos.",
   keywords: [
-    "produto digital",
-    "solução digital personalizada",
-    "desenvolvimento customizado",
+    "produto digital sob medida",
+    "desenvolvimento de software customizado",
     "integração de sistemas",
-    "API customizada",
-    "software sob medida",
-    "ferramenta digital",
-    "desenvolvimento de produto",
+    "api sob medida",
+    "ferramenta digital personalizada",
+    "agência de produto digital brasil",
+    "desenvolvedor freelance remoto",
+    "software empresarial sob medida",
   ],
+  alternates: { canonical: PATH },
   openGraph: {
-    title: "Produtos Digitais Customizados | 4 Pixels",
+    title: "Produtos Digitais Customizados e Soluções Sob Medida | 4 Pixels",
     description:
-      "Soluções digitais personalizadas para o seu modelo de negócio. Solicite um orçamento.",
+      "Integrações, APIs e ferramentas sob medida. Atendemos clientes em todo o Brasil e projetos remotos.",
     type: "website",
     locale: "pt_BR",
+    url: PATH,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Produtos Digitais Customizados e Soluções Sob Medida | 4 Pixels",
+    description:
+      "Integrações, APIs e ferramentas sob medida. Atendimento no Brasil e projetos remotos.",
   },
 };
 
@@ -37,13 +49,13 @@ const jsonLd = {
   "@type": "Service",
   name: "Produtos Digitais Customizados",
   description:
-    "Desenvolvimento de soluções digitais personalizadas: integrações, APIs, ferramentas e produtos sob medida.",
-  provider: {
-    "@type": "Organization",
-    name: "4 Pixels — Agência Digital",
-    url: "https://fourpixels.com.br",
-  },
-  areaServed: { "@type": "Country", name: "Brasil" },
+    "Desenvolvimento de soluções digitais personalizadas — integrações, APIs e ferramentas sob medida. Atendemos todo o Brasil e projetos remotos no exterior.",
+  url: `${SITE_URL}${PATH}`,
+  provider: { "@id": `${SITE_URL}/#business` },
+  areaServed: [
+    { "@type": "Country", name: "Brasil" },
+    { "@type": "Place", name: "Worldwide" },
+  ],
   serviceType: "Custom Software Development",
 };
 
@@ -64,6 +76,15 @@ export default function ProdutosCustomizados() {
           cta="Tenho um projeto"
           whatsappMessage="Olá! Tenho um projeto de produto digital customizado e gostaria de conversar sobre um orçamento."
           visual={<CodeMockup />}
+          breadcrumbs={
+            <Breadcrumbs
+              items={[
+                { label: "Início", href: "/" },
+                { label: "Serviços", href: "/#servicos" },
+                { label: "Produtos Customizados" },
+              ]}
+            />
+          }
         />
         <ProblemSolution
           problemTitle={

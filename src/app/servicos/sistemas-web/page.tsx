@@ -8,27 +8,39 @@ import Differentials from "@/components/services/Differentials";
 import ServiceFaq from "@/components/services/ServiceFaq";
 import ServiceCta from "@/components/services/ServiceCta";
 import DashboardMockup from "@/components/services/visuals/DashboardMockup";
+import Breadcrumbs from "@/components/services/Breadcrumbs";
+
+const PATH = "/servicos/sistemas-web";
+const SITE_URL = "https://ad4pixels.com.br";
 
 export const metadata: Metadata = {
-  title: "Desenvolvimento de Sistemas Web | 4 Pixels — Agência Digital",
+  title: "Desenvolvimento de Sistemas Web Sob Medida",
   description:
-    "Desenvolvimento de sistemas web sob medida. Dashboards, painéis administrativos, plataformas e automações para otimizar seu negócio.",
+    "Desenvolvimento de sistemas web sob medida. Dashboards, painéis administrativos, plataformas e automações. Atendemos todo o Brasil e projetos remotos.",
   keywords: [
-    "desenvolvimento de sistemas",
-    "sistema web",
-    "dashboard",
-    "painel administrativo",
-    "plataforma web",
-    "sistema sob medida",
-    "automação de processos",
-    "sistema para empresa",
+    "desenvolvimento de sistemas web",
+    "sistema web sob medida",
+    "dashboard administrativo",
+    "plataforma web sob medida",
+    "automação de processos empresariais",
+    "agência de sistemas brasil",
+    "desenvolvedor de sistemas remoto",
+    "software empresarial sob medida",
   ],
+  alternates: { canonical: PATH },
   openGraph: {
-    title: "Desenvolvimento de Sistemas Web | 4 Pixels",
+    title: "Desenvolvimento de Sistemas Web Sob Medida | 4 Pixels",
     description:
-      "Sistemas web sob medida para otimizar seu negócio. Solicite um orçamento sem compromisso.",
+      "Sistemas, dashboards e plataformas sob medida. Atendemos clientes em todo o Brasil e projetos remotos.",
     type: "website",
     locale: "pt_BR",
+    url: PATH,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Desenvolvimento de Sistemas Web Sob Medida | 4 Pixels",
+    description:
+      "Dashboards, plataformas e automações sob medida. Atendimento no Brasil e projetos remotos.",
   },
 };
 
@@ -37,13 +49,13 @@ const jsonLd = {
   "@type": "Service",
   name: "Desenvolvimento de Sistemas Web",
   description:
-    "Desenvolvimento de sistemas web sob medida: dashboards, painéis administrativos, plataformas e automações empresariais.",
-  provider: {
-    "@type": "Organization",
-    name: "4 Pixels — Agência Digital",
-    url: "https://fourpixels.com.br",
-  },
-  areaServed: { "@type": "Country", name: "Brasil" },
+    "Desenvolvimento de sistemas web sob medida — dashboards, painéis administrativos, plataformas e automações empresariais. Atendemos todo o Brasil e projetos remotos no exterior.",
+  url: `${SITE_URL}${PATH}`,
+  provider: { "@id": `${SITE_URL}/#business` },
+  areaServed: [
+    { "@type": "Country", name: "Brasil" },
+    { "@type": "Place", name: "Worldwide" },
+  ],
   serviceType: "Web Application Development",
 };
 
@@ -64,6 +76,15 @@ export default function SistemasWeb() {
           cta="Preciso de um sistema"
           whatsappMessage="Olá! Preciso de um sistema web sob medida para minha empresa. Pode me enviar um orçamento?"
           visual={<DashboardMockup />}
+          breadcrumbs={
+            <Breadcrumbs
+              items={[
+                { label: "Início", href: "/" },
+                { label: "Serviços", href: "/#servicos" },
+                { label: "Sistemas Web" },
+              ]}
+            />
+          }
         />
         <ProblemSolution
           problemTitle={

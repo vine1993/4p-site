@@ -11,9 +11,20 @@ const navGroups = [
     ],
   },
   {
+    title: "Soluções por Segmento",
+    links: [
+      { label: "Site para Advogados", href: "/servicos/site-para-advogados" },
+      { label: "Site para Médicos", href: "/servicos/site-para-medicos" },
+      { label: "Site para Dentistas", href: "/servicos/site-para-dentistas" },
+      { label: "Site para Veterinária", href: "/servicos/site-para-clinica-veterinaria" },
+      { label: "Site para Imobiliárias", href: "/servicos/site-para-imobiliarias" },
+      { label: "Cardápio Digital", href: "/servicos/cardapio-virtual" },
+    ],
+  },
+  {
     title: "Empresa",
     links: [
-      { label: "Sobre Nós", href: "#" },
+      { label: "Blog", href: "/blog" },
       { label: "Como Funciona", href: "/#como-funciona" },
       { label: "Resultados", href: "/#resultados" },
     ],
@@ -40,6 +51,20 @@ export default function Footer() {
               Agência digital especializada em sites e aplicativos que geram
               resultados para o seu negócio.
             </p>
+            <address className="mt-6 not-italic space-y-2 text-sm text-(--color-text-secondary)">
+              <p>Sediados em São Paulo · SP · Brasil</p>
+              <p>
+                <a
+                  href="tel:+5511961848388"
+                  className="transition-colors hover:text-(--color-text-primary)"
+                >
+                  (11) 96184-8388
+                </a>
+              </p>
+              <p className="text-xs text-text-secondary/70">
+                Atendemos todo o Brasil e projetos remotos no exterior
+              </p>
+            </address>
           </div>
 
           {/* Nav groups — col 6-12 */}

@@ -10,6 +10,7 @@ interface ServiceHeroProps {
   cta: string;
   whatsappMessage: string;
   visual: ReactNode;
+  breadcrumbs?: ReactNode;
 }
 
 export default function ServiceHero({
@@ -20,6 +21,7 @@ export default function ServiceHero({
   cta,
   whatsappMessage,
   visual,
+  breadcrumbs,
 }: ServiceHeroProps) {
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
   return (
@@ -29,6 +31,7 @@ export default function ServiceHero({
       <div className="pointer-events-none absolute top-1/3 right-0 h-[300px] w-[400px] rounded-full bg-(--color-accent-blue)/6 blur-[120px]" />
 
       <div className="mx-auto max-w-(--layout-max-width) px-6 lg:px-20">
+        {breadcrumbs && <div className="mb-8">{breadcrumbs}</div>}
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Text */}
           <div>

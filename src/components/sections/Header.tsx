@@ -13,7 +13,7 @@ const serviceLinks = [
 
 const navLinks = [
   { label: "Como Funciona", href: "/#como-funciona" },
-  { label: "Resultados", href: "/#resultados" },
+  { label: "Blog", href: "/blog" },
   { label: "Contato", href: "/#contato" },
 ];
 

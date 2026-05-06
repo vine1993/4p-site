@@ -8,27 +8,39 @@ import Differentials from "@/components/services/Differentials";
 import ServiceFaq from "@/components/services/ServiceFaq";
 import ServiceCta from "@/components/services/ServiceCta";
 import PhoneMockup from "@/components/services/visuals/PhoneMockup";
+import Breadcrumbs from "@/components/services/Breadcrumbs";
+
+const PATH = "/servicos/aplicativos-mobile";
+const SITE_URL = "https://ad4pixels.com.br";
 
 export const metadata: Metadata = {
-  title: "Desenvolvimento de Aplicativos Mobile | 4 Pixels — Agência Digital",
+  title: "Desenvolvimento de Aplicativos Mobile para iOS e Android",
   description:
-    "Desenvolvimento de aplicativos mobile para iOS e Android. Apps nativos e multiplataforma com design intuitivo e foco na experiência do usuário.",
+    "Desenvolvimento de aplicativos mobile nativos e multiplataforma para iOS e Android. Atendemos clientes em todo o Brasil e projetos remotos no exterior.",
   keywords: [
-    "desenvolvimento de aplicativos",
-    "criar aplicativo",
-    "app mobile",
-    "aplicativo ios",
-    "aplicativo android",
-    "desenvolvimento de apps",
-    "empresa de aplicativos",
-    "criar app",
+    "desenvolvimento de aplicativos mobile",
+    "criação de apps ios e android",
+    "agência de aplicativos brasil",
+    "desenvolvedor de apps remoto",
+    "criar aplicativo sob medida",
+    "empresa de desenvolvimento de apps",
+    "aplicativo react native",
+    "aplicativo flutter",
   ],
+  alternates: { canonical: PATH },
   openGraph: {
-    title: "Desenvolvimento de Aplicativos Mobile | 4 Pixels",
+    title: "Desenvolvimento de Aplicativos Mobile iOS e Android | 4 Pixels",
     description:
-      "Apps para iOS e Android com design intuitivo e foco na experiência do usuário. Solicite um orçamento.",
+      "Apps nativos e multiplataforma com design intuitivo. Atendemos clientes em todo o Brasil e projetos remotos.",
     type: "website",
     locale: "pt_BR",
+    url: PATH,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Desenvolvimento de Aplicativos Mobile iOS e Android | 4 Pixels",
+    description:
+      "Apps para iOS e Android com design intuitivo. Atendimento no Brasil e projetos remotos.",
   },
 };
 
@@ -37,13 +49,13 @@ const jsonLd = {
   "@type": "Service",
   name: "Desenvolvimento de Aplicativos Mobile",
   description:
-    "Desenvolvimento de aplicativos nativos e multiplataforma para iOS e Android com design intuitivo e foco na experiência do usuário.",
-  provider: {
-    "@type": "Organization",
-    name: "4 Pixels — Agência Digital",
-    url: "https://fourpixels.com.br",
-  },
-  areaServed: { "@type": "Country", name: "Brasil" },
+    "Desenvolvimento de aplicativos nativos e multiplataforma para iOS e Android. Atendemos clientes em todo o Brasil e projetos remotos no exterior.",
+  url: `${SITE_URL}${PATH}`,
+  provider: { "@id": `${SITE_URL}/#business` },
+  areaServed: [
+    { "@type": "Country", name: "Brasil" },
+    { "@type": "Place", name: "Worldwide" },
+  ],
   serviceType: "Mobile App Development",
 };
 
@@ -64,6 +76,15 @@ export default function AplicativosMobile() {
           cta="Quero meu app"
           whatsappMessage="Olá! Gostaria de desenvolver um aplicativo mobile. Pode me enviar um orçamento?"
           visual={<PhoneMockup />}
+          breadcrumbs={
+            <Breadcrumbs
+              items={[
+                { label: "Início", href: "/" },
+                { label: "Serviços", href: "/#servicos" },
+                { label: "Aplicativos Mobile" },
+              ]}
+            />
+          }
         />
         <ProblemSolution
           problemTitle={

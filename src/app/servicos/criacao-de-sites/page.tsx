@@ -8,27 +8,39 @@ import Differentials from "@/components/services/Differentials";
 import ServiceFaq from "@/components/services/ServiceFaq";
 import ServiceCta from "@/components/services/ServiceCta";
 import BrowserMockup from "@/components/services/visuals/BrowserMockup";
+import Breadcrumbs from "@/components/services/Breadcrumbs";
+
+const PATH = "/servicos/criacao-de-sites";
+const SITE_URL = "https://ad4pixels.com.br";
 
 export const metadata: Metadata = {
-  title: "Criação de Sites Profissionais | 4 Pixels — Agência Digital",
+  title: "Criação de Sites Profissionais com Foco em Conversão",
   description:
-    "Criação de sites profissionais com design exclusivo e foco em conversão. Sites institucionais, landing pages e e-commerces. Solicite um orçamento.",
+    "Criação de sites profissionais com design exclusivo e foco em conversão. Sites institucionais, landing pages e e-commerces. Atendemos todo o Brasil e projetos remotos.",
   keywords: [
-    "criação de sites",
     "criação de sites profissionais",
-    "empresa que faz site",
-    "agência de sites",
-    "desenvolvimento de sites",
-    "fazer site profissional",
-    "site institucional",
-    "landing page",
+    "agência de criação de sites",
+    "site institucional sob medida",
+    "landing page de alta conversão",
+    "criação de e-commerce",
+    "desenvolvimento de sites brasil",
+    "agência de sites remota",
+    "site otimizado para conversão",
   ],
+  alternates: { canonical: PATH },
   openGraph: {
-    title: "Criação de Sites Profissionais | 4 Pixels",
+    title: "Criação de Sites Profissionais com Foco em Conversão | 4 Pixels",
     description:
-      "Sites com design exclusivo e foco em conversão. Solicite um orçamento sem compromisso.",
+      "Sites com design exclusivo e foco em conversão. Atendemos clientes em todo o Brasil e projetos remotos.",
     type: "website",
     locale: "pt_BR",
+    url: PATH,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Criação de Sites Profissionais com Foco em Conversão | 4 Pixels",
+    description:
+      "Sites institucionais, landing pages e e-commerces. Atendimento no Brasil e projetos remotos.",
   },
 };
 
@@ -37,13 +49,13 @@ const jsonLd = {
   "@type": "Service",
   name: "Criação de Sites Profissionais",
   description:
-    "Desenvolvimento de sites institucionais, landing pages e e-commerces com design exclusivo e foco em conversão.",
-  provider: {
-    "@type": "Organization",
-    name: "4 Pixels — Agência Digital",
-    url: "https://fourpixels.com.br",
-  },
-  areaServed: { "@type": "Country", name: "Brasil" },
+    "Desenvolvimento de sites institucionais, landing pages e e-commerces com design exclusivo e foco em conversão. Atendemos todo o Brasil e projetos remotos no exterior.",
+  url: `${SITE_URL}${PATH}`,
+  provider: { "@id": `${SITE_URL}/#business` },
+  areaServed: [
+    { "@type": "Country", name: "Brasil" },
+    { "@type": "Place", name: "Worldwide" },
+  ],
   serviceType: "Web Development",
 };
 
@@ -64,6 +76,15 @@ export default function CriacaoDeSites() {
           cta="Quero meu site"
           whatsappMessage="Olá! Tenho interesse em criar um site profissional. Pode me enviar um orçamento?"
           visual={<BrowserMockup />}
+          breadcrumbs={
+            <Breadcrumbs
+              items={[
+                { label: "Início", href: "/" },
+                { label: "Serviços", href: "/#servicos" },
+                { label: "Criação de Sites" },
+              ]}
+            />
+          }
         />
         <ProblemSolution
           problemTitle={
@@ -173,6 +194,83 @@ export default function CriacaoDeSites() {
             },
           ]}
         />
+        <section className="relative bg-(--color-bg-elevated) py-20 lg:py-28">
+          <div className="mx-auto max-w-(--layout-max-width) px-6 lg:px-20">
+            <div className="grid grid-cols-12 gap-6">
+              <div className="col-span-12 lg:col-span-7">
+                <p className="text-xs tracking-[0.2em] uppercase text-(--color-accent-blue) mb-4">
+                  Soluções por Segmento
+                </p>
+                <h2 className="text-3xl font-bold tracking-tight lg:text-5xl">
+                  Sites pensados para{" "}
+                  <span className="text-gradient-primary">o seu segmento.</span>
+                </h2>
+                <p className="mt-4 max-w-xl text-(--color-text-secondary) text-lg">
+                  Cada negócio tem regras, jornada e linguagem próprias. Construímos páginas dedicadas a quem entende disso melhor que ninguém — você.
+                </p>
+              </div>
+            </div>
+            <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:mt-16">
+              {[
+                {
+                  title: "Site para Advogados",
+                  description: "Em conformidade com o Provimento 205/2021 da OAB, com SEO jurídico e captura de leads qualificados.",
+                  href: "/servicos/site-para-advogados",
+                  accent: "text-(--color-accent-blue)",
+                },
+                {
+                  title: "Site para Médicos",
+                  description: "Em conformidade com a Resolução CFM 1974/2011, com especialidades, currículo e agendamento online.",
+                  href: "/servicos/site-para-medicos",
+                  accent: "text-(--color-accent-blue)",
+                },
+                {
+                  title: "Site para Dentistas",
+                  description: "Em conformidade com a Resolução CFO 196/2019, com especialidades odontológicas e agendamento.",
+                  href: "/servicos/site-para-dentistas",
+                  accent: "text-(--color-accent-blue)",
+                },
+                {
+                  title: "Site para Clínica Veterinária",
+                  description: "Apresentação dos serviços, equipe e infraestrutura, com agendamento online integrado.",
+                  href: "/servicos/site-para-clinica-veterinaria",
+                  accent: "text-(--color-accent-green)",
+                },
+                {
+                  title: "Site para Imobiliárias",
+                  description: "Listings sincronizados com Imobzi, Jetimob e Vista, captação de leads e SEO por bairro.",
+                  href: "/servicos/site-para-imobiliarias",
+                  accent: "text-(--color-accent-purple)",
+                },
+                {
+                  title: "Cardápio Digital",
+                  description: "Cardápio com QR code na mesa, pedidos pelo WhatsApp, sem comissão e sem app.",
+                  href: "/servicos/cardapio-virtual",
+                  accent: "text-(--color-accent-orange)",
+                },
+              ].map((segment) => (
+                <a
+                  key={segment.href}
+                  href={segment.href}
+                  className="glass-card group relative flex flex-col gap-4 p-8 transition-all duration-300 hover:brightness-110"
+                >
+                  <h3 className={`text-xl font-bold ${segment.accent}`}>
+                    {segment.title}
+                  </h3>
+                  <p className="text-(--color-text-secondary) leading-relaxed">
+                    {segment.description}
+                  </p>
+                  <span className="mt-auto inline-flex items-center gap-2 text-sm font-semibold text-(--color-text-primary)">
+                    Conhecer
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M5 3L9 7L5 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
         <ServiceFaq
           faqs={[
             {
